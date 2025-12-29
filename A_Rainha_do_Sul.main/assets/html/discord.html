@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/discord.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="shortcut icon" href="/assets/img/FavIcon.png" type="image/x-icon">
+    <title>Rainha | Discord </title>
+</head>
+<body>
+<header class="header">
+        <a href="#"></a>
+        <nav class="navbar">
+            <a href="/index.html">Home</a>
+            <a href="/assets/html/about.html">About</a>
+            <a href="/assets/html/store.html">Store</a>
+            <a href="#" class="active">Discord</a>
+            <a href="/assets/html/FAQ.html">FAQ</a>
+        </nav>
+    </header>
+    
+    <section class="discord-section">
+        <div class="discord-hero">
+            <h1 class="discord-title">Discord</h1>
+            <p class="discord-subtitle">Acompanhe as últimas notícias e mensagens do nosso servidor em tempo real</p>
+            <a href="https://discord.gg/rainhadosul" target="_blank">
+                <button class="discord-button">Entrar no Discord</button>
+            </a>
+        </div>
+
+        <div class="news-section">
+            <h2 class="section-title">Jornal de Notícias em Tempo Real</h2>
+            
+            <div class="news-container">
+                <div class="live-indicator">
+                    <div class="live-pulse"></div>
+                    <span>TRANSMISSÃO AO VIVO - MENSAGENS DO DISCORD</span>
+                </div>
+
+                <div class="status-indicator">
+                    <div class="status-dot status-connected" id="statusDot"></div>
+                    <span id="statusText">Conectado ao Discord</span>
+                </div>
+                
+                <div class="messages-container" id="messagesContainer">
+                    <div class="loading-message">Carregando mensagens do Discord...</div>
+                </div>
+                
+                <button class="refresh-button" onclick="fetchDiscordMessages()">
+                    <span>Atualizar Mensagens</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="footer-content">
+  
+        <div class="footer-section footer-brand">
+            <div class="footer-logo">RAINHA DO SUL</div>
+            <p class="footer-description">
+                Uma experiência única de Roleplay no GTA V, onde cada jogador escreve sua própria história em um mundo cheio de mistérios e oportunidades.
+            </p>
+            <div class="social-links">
+                <a href="https://discord.gg/GdrN6GHMJv" class="social-link" target="_blank" title="Discord">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.18.33.25c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+                    </svg>
+                </a>
+                <a href="https://www.twitch.tv/lordbertzchannel" class="social-link" target="_blank" title="Twitch">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/>
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/@fulltugasGamingCommunity" class="social-link" target="_blank" title="YouTube">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/a.rainha.do.sul/" class="social-link" target="_blank" title="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="footer-section">
+            <h3 class="footer-heading">Navegação</h3>
+            <ul class="footer-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/assets/html/about.html">Sobre Nós</a></li>
+                <li><a href="/assets/html/store.html" target="_blank">Loja</a></li>
+                <li><a href="/assets/html/discord.html">Discord</a></li>
+                <li><a href="/assets/html/FAQ.html">FAQ</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3 class="footer-heading">Recursos</h3>
+            <ul class="footer-links">
+                <li><a href="/assets/html/Docs.html">Documentação</a></li>
+                <li><a href="/assets/html/FAQ.html">Guias</a></li>
+                <li><a href="https://discord.gg/TMRkatVVxy" target="_blank">Regras</a></li>
+                <li><a href="https://discord.gg/TMRkatVVxy" target="_blank">Suporte</a></li>
+                <li><a href="/assets/html/status.html" target="_blank">Status do Servidor</a></li>
+            </ul>
+        </div>
+
+
+        <div class="footer-section">
+            <h3 class="footer-heading">Contato</h3>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">✉</div>
+                    <span>Em breve</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">⚙</div>
+                    <span>IP: IP on Discord !!</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕐</div>
+                    <span>24/7 Online</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="copyright">
+            © 2024 Rainha do Sul RP. Todos os direitos reservados.
+        </div>
+        <div class="footer-legal">
+            <a href="/assets/html/termos.html" target="_blank">Termos de Serviço</a>
+            <a href="/assets/html/cookies.html" target="_blank">Cookies</a>
+        </div>
+        <div class="back-to-top" onclick="scrollToTop()">
+            ↑
+        </div>
+    </div>
+</footer>
+    <script src="/assets/js/discord.js"></script>
+    <script src="/assets/js/footer.js"></script>
+</body>
+</html>

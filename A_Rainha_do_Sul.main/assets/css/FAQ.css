@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Stack Sans Text", sans-serif;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px);
+    height: 60px;
+    padding: 10px 10px;
+    border-bottom: 1px solid #ffffff1e;
+    padding-bottom: 5px;
+    z-index: 10;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-right: 700px;
+    gap: 30px;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: #ffffff;
+    font-size: 15px;
+    padding: 8px 15px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease, border 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffffff;
+    background-color: rgba(14, 14, 14, 0);
+    border: 1px solid #ffffff54;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.438);
+}
+
+.navbar a.active {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.5px solid #ffffff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.navbar a.active::after {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: #4c9d92;
+    border-radius: 50%;
+}
+.faq-section {
+    margin-top: 70px;
+    min-height: calc(100vh - 70px);
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(157, 76, 144, 0.1) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(157,76,144,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.faq-hero {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-title {
+    font-family: "Elms Sans", sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(157, 76, 144, 0.5);
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(157, 76, 144, 0.5);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(157, 76, 144, 0.8), 0 0 30px rgba(157, 76, 144, 0.6);
+    }
+}
+
+.faq-subtitle {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.search-container {
+    max-width: 500px;
+    margin: 0 auto 40px;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    padding: 15px 50px 15px 20px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #9d4c90;
+    box-shadow: 0 0 20px rgba(157, 76, 144, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9d4c90;
+}
+
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #cccccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: rgba(157, 76, 144, 0.2);
+    border-color: #9d4c90;
+    color: #ffffff;
+}
+
+.faq-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.faq-item:hover {
+    border-color: rgba(157, 76, 144, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.question-text {
+    font-family: "Elms Sans", sans-serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 500;
+    flex: 1;
+}
+
+.faq-icon {
+    color: #9d4c90;
+    transition: transform 0.3s ease;
+    margin-left: 15px;
+    min-width: 20px;
+}
+
+.faq-answer {
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 25px 25px;
+    max-height: 500px;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-category {
+    display: block;
+    font-size: 0.8rem;
+    color: #9d4c90;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-section {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.contact-title {
+    font-family: "Elms Sans", sans-serif;
+    font-size: 2rem;
+    color: #ff8eff;
+    margin-bottom: 20px;
+}
+
+.contact-text {
+    color: #cccccc;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    background: rgba(157, 76, 144, 0.2);
+    border: 1px solid #9d4c90;
+    border-radius: 25px;
+    padding: 12px 25px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-btn:hover {
+    background: rgba(157, 76, 144, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(157, 76, 144, 0.3);
+}
+
+.no-results {
+    text-align: center;
+    color: #888;
+    padding: 40px;
+    font-style: italic;
+    display: none;
+}
+
+/* Estilos específicos para o conteúdo de RolePlay */
+.roleplay-content {
+    line-height: 1.8;
+}
+
+.roleplay-content h3 {
+    color: #ff8eff;
+    margin: 25px 0 15px 0;
+    font-family: "Elms Sans", sans-serif;
+    font-size: 1.3rem;
+}
+
+.roleplay-content p {
+    margin-bottom: 15px;
+}
+
+.roleplay-content ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.roleplay-content li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.roleplay-content li::before {
+    content: '•';
+    color: #9d4c90;
+    position: absolute;
+    left: -10px;
+}
+
+.roleplay-content strong {
+    color: #ff8eff;
+    font-weight: 600;
+}
+
+.roleplay-content em {
+    color: #9d4c90;
+    font-style: italic;
+}
+
+.example-box {
+    background: rgba(157, 76, 144, 0.1);
+    border: 1px solid rgba(157, 76, 144, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #9d4c90;
+}
+
+.example-title {
+    color: #ff8eff;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: "Elms Sans", sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .faq-title {
+        font-size: 2.5rem;
+    }
+    
+    .faq-subtitle {
+        font-size: 1rem;
+    }
+    
+    .faq-question {
+        padding: 20px;
+    }
+    
+    .question-text {
+        font-size: 1rem;
+    }
+    
+    .faq-answer {
+        padding: 0 20px;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 20px 20px;
+    }
+    
+    .contact-section {
+        padding: 30px 20px;
+    }
+    
+    .contact-title {
+        font-size: 1.5rem;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-btn {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+    
+    .navbar {
+        gap: 10px;
+    }
+    
+    .navbar a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .roleplay-content h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-title {
+        font-size: 2rem;
+    }
+    
+    .faq-categories {
+        gap: 10px;
+    }
+    
+    .category-btn {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+}

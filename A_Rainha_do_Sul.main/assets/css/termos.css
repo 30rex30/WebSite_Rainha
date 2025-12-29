@@ -1,0 +1,181 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #1a1f2e;
+            --secondary: #252b3d;
+            --accent: #3498db;
+            --accent-dark: #2980b9;
+            --text: #e0e0e0;
+            --text-light: #a0a0a0;
+            --border: #34495e;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--primary) 0%, #0d1117 100%);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--secondary);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--accent-dark), var(--accent));
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .update-date {
+            color: rgba(255, 255, 255, 0.8);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        h2 {
+            color: var(--accent);
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+            font-weight: 600;
+        }
+        
+        h2:first-child {
+            margin-top: 0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 10px;
+        }
+        
+        li:before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: -10px;
+        }
+        
+        .highlight {
+            background-color: rgba(52, 152, 219, 0.1);
+            padding: 15px;
+            border-left: 4px solid var(--accent);
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .section-number {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        footer {
+            background-color: var(--primary);
+            padding: 20px;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9em;
+            border-top: 1px solid var(--border);
+        }
+        
+        .accept-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto 0;
+            padding: 12px 20px;
+            background: linear-gradient(to right, var(--accent-dark), var(--accent));
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .accept-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+        
+        /* Scrollbar personalizada */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--primary);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-dark);
+        }
